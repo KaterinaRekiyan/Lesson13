@@ -17,13 +17,7 @@ public class ProductManager {
         return all;
     }
 
-    public ProductRepository getRepo() {
-        return repo;
-    }
 
-    public void setRepo(ProductRepository repo) {
-        this.repo = repo;
-    }
 
     public Product[] searchBy(String text) {
         Product[] result = new Product[0]; // тут будем хранить подошедшие запросу продукты
@@ -33,6 +27,7 @@ public class ProductManager {
                 for (int i = 0; i < result.length; i++) {
                     tmp[i] = result[i];
                 }
+                tmp[tmp.length-1] = product;
                 result = tmp;
                 // "добавляем в конец" массива result продукт product
             }
