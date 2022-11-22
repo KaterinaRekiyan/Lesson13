@@ -32,9 +32,8 @@ public class ProductManagerTest {
 
     @Test
     public void searchByTest() {
-        manager.searchBy("Анастасия");
         Product[] expected = {product1};
-        Product[] actual = manager.getProducts();
+        Product[] actual = manager.searchBy("Анастасия");
         Assertions.assertArrayEquals(expected, actual);
     }
 
