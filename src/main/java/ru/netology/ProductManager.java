@@ -3,6 +3,7 @@ package ru.netology;
 public class ProductManager {
     private ProductRepository repo;
 
+
     public ProductManager(ProductRepository repo) {
         this.repo = repo;
     }
@@ -45,5 +46,6 @@ public class ProductManager {
         // или в одну строку:
         // return product.getName().contains(search);
     }
+
 }
 
