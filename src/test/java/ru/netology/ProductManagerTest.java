@@ -76,6 +76,15 @@ public class ProductManagerTest {
     }
 
     @Test
+    public void testNotRemove() {
+        repo.removeById(2);
+        Product[] expected = {product1, product2, product3, product4};
+        Product[] actual = repo.findAll();
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+
+    @Test
     void exceptionTest() {
         Assertions.assertThrows(NotFoundException.class,
                 () ->repo.removeById(1));
